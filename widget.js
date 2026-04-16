@@ -10,4 +10,7 @@
   }).then(function (data) {
     sendResult(data.ip);    
   }).catch(function (err) {
-    sendResult(null, err && err.message ? err.message : String(err));    });})();
+    sendResult(null, err && err.message ? err.message : String(err));
+  console.log('widget running');
+  });
+})();
