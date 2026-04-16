@@ -4,7 +4,7 @@
       if (window.__ipWidgetCallback) {window.__ipWidgetCallback(ip, err);}
     } catch (e) {}  
   }
-  fetch('https://api64.ipify.org?format=json').then(function (response) {
+  fetch('https://ifconfig.co/json').then(function (response) {
     if (!response.ok) throw new Error('HTTP ' + response.status);      
      return response.json();
   }).then(function (data) {
