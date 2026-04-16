@@ -6,7 +6,7 @@
   }
   fetch('https://icanhazip.com').then(function (response) {
     if (!response.ok) throw new Error('HTTP ' + response.status);      
-     return response;
+     return {"ip":response};
   }).then(function (data) {
     sendResult(data.ip);    
   }).catch(function (err) {
