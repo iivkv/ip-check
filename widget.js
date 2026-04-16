@@ -4,9 +4,9 @@
       if (window.__ipWidgetCallback) {window.__ipWidgetCallback(ip, err);}
     } catch (e) {}  
   }
-  fetch('https://api.myip.com').then(function (response) {
+  fetch('https://ifconfig.co/json').then(function (response) {
     if (!response.ok) throw new Error('HTTP ' + response.status);      
-     return response.json();
+     return response.json().ip;
   }).then(function (data) {
     sendResult(data.ip);    
   }).catch(function (err) {
